@@ -1,83 +1,105 @@
-@import 'base';
-@import 'utils';
+@import "base";
+@import "utils";
 
 body {
-    color: white;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 56%, rgba(0,212,255,1) 81%);
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 56%,
+    rgba(0, 212, 255, 1) 81%
+  );
 }
 
 // general utilities
 .flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
-    margin: auto;
-    max-width: 1254px;
-    display: grid;
-    grid-template-areas:
-        "header header header"
-        "menu content chat"
-        ;
-    grid-template-rows: 85px 1fr;
-    grid-template-columns: 12% 1fr 20%;
-    min-height: 100vh; 
+  margin: auto;
+  max-width: 1254px;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "menu content chat";
+  grid-template-rows: 85px 1fr;
+  grid-template-columns: 12% 1fr 20%;
+  min-height: 100vh;
 
-    .header {
-        display: flex;
-        background-color: $header-color;
-        grid-area: header;
+  .header {
+    display: flex;
+    background-color: $header-color;
+    grid-area: header;
+  }
+  .menu {
+    background-color: $menu-color;
+    grid-area: menu;
+  }
+
+  .content {
+    grid-area: content;
+    background-color: white;
+  }
+
+  .chat {
+    background-color: $chat-color;
+    grid-area: chat;
+  }
+
+  .search {
+    background-color: $green-color;
+    width: 200px;
+
+    input {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      border-bottom: 1px solid white;
+      color: white;
+      width: 140px;
+      :hover,
+      :active,
+      :focus {
+        outline: none;
+      }
     }
-    .menu {
-        background-color: $menu-color;
-        grid-area: menu;
+    @include placeholder {
+      color: white;
+      font-style: italic;
     }
 
-    .content {
-        grid-area: content;
-        background-color: white;
+    .icon {
+      position: relative;
+      top: -5px;
+      left: -15px;
+    }
+  }
+  .nav-menu {
+    flex-grow: 1;
+    justify-content: flex-end;
+
+    .icon {
+      width: 20px;
+      height: 20px;
     }
 
-    .chat {
-        background-color: $chat-color;
-        grid-area: chat;
+    .icon-container {
+      border-radius: 50%;
+      border-color: white;
+      border-style: solid;
+      border-width: 1px;
+      width: 35px;
+      height: 35px;
+      margin-right: 30px;
+      cursor: pointer;
     }
-
-    .search {
-        background-color: $green-color;
-        width: 200px;
-
-        input {
-            border: none;
-            outline: none;
-            background-color: transparent;
-            border-bottom: 1px solid white;
-            color: white;
-            width: 140px;
-            :hover, :active, :focus {
-                outline: none;
-            }
-        }
-        @include placeholder {
-            color: white;
-            font-style: italic;
-        }
-
-        .icon {
-            position: relative;
-            top: -5px;
-            left: -15px;
-            cursor: pointer;
-        }
-    }
-    .nav-menu {
-        flex-grow: 1;
-        justify-content: flex-end;
-    }
-    .add-new {
-        background-color: $orange-color;
-        width: 85px;
-    }
+  }
+  .add-new {
+    cursor: pointer;
+    background-color: $orange-color;
+    width: 85px;
+  }
 }

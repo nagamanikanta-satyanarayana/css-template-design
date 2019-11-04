@@ -1,17 +1,27 @@
 // useful mixins
 @mixin placeholder {
-    ::-webkit-input-placeholder {@content}
-    :-moz-placeholder           {@content}
-    ::-moz-placeholder          {@content}
-    :-ms-input-placeholder      {@content}  
+  ::-webkit-input-placeholder {
+    @content;
+  }
+  :-moz-placeholder {
+    @content;
+  }
+  ::-moz-placeholder {
+    @content;
+  }
+  :-ms-input-placeholder {
+    @content;
+  }
 }
 
 .icon {
-    width: 15px;
-    height: 15px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
 }
 
 .icon-bg {
-    width: 25px;
-    height: 25px;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
 }
