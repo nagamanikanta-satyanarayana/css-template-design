@@ -1,10 +1,24 @@
+body {
+  color: white; }
+
 .container {
   display: grid;
-  min-height: 100vh;
-  background-color: gray; }
+  grid-template-areas: "header header header" "menu content chat";
+  grid-template-rows: 80px 1fr;
+  grid-template-columns: 12% 1fr 20%;
+  min-height: 100vh; }
   .container div {
-    width: 100px;
-    height: 100px;
-    border: 1px solid black; }
+    border: 1px dotted red; }
+  .container .header {
+    background-color: #151D20;
+    grid-area: header; }
+  .container .menu {
+    background-color: #1F282D;
+    grid-area: menu; }
+  .container .content {
+    grid-area: content; }
+  .container .chat {
+    background-color: #EAEDF1;
+    grid-area: chat; }
 
 /*# sourceMappingURL=index.css.map */
