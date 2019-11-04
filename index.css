@@ -1,24 +1,41 @@
 body {
-  color: white; }
+  color: white;
+  background: linear-gradient(90deg, #020024 0%, #090979 56%, #00d4ff 81%); }
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .container {
+  margin: auto;
+  max-width: 1254px;
   display: grid;
   grid-template-areas: "header header header" "menu content chat";
-  grid-template-rows: 80px 1fr;
+  grid-template-rows: 85px 1fr;
   grid-template-columns: 12% 1fr 20%;
   min-height: 100vh; }
-  .container div {
-    border: 1px dotted red; }
   .container .header {
+    display: flex;
     background-color: #151D20;
     grid-area: header; }
   .container .menu {
     background-color: #1F282D;
     grid-area: menu; }
   .container .content {
-    grid-area: content; }
+    grid-area: content;
+    background-color: white; }
   .container .chat {
     background-color: #EAEDF1;
     grid-area: chat; }
+  .container .search {
+    background-color: #2FB398;
+    width: 200px; }
+  .container .nav-menu {
+    flex-grow: 1;
+    justify-content: flex-end; }
+  .container .add-new {
+    background-color: #E76048;
+    width: 85px; }
 
 /*# sourceMappingURL=index.css.map */

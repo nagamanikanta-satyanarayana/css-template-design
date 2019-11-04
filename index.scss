@@ -1,20 +1,30 @@
 @import 'base';
 body {
     color: white;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 56%, rgba(0,212,255,1) 81%);
 }
+
+// general utilities
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .container {
+    margin: auto;
+    max-width: 1254px;
     display: grid;
     grid-template-areas:
         "header header header"
         "menu content chat"
         ;
-    grid-template-rows: 80px 1fr;
+    grid-template-rows: 85px 1fr;
     grid-template-columns: 12% 1fr 20%;
     min-height: 100vh; 
-    div {
-        border: 1px dotted red;
-    }
+
     .header {
+        display: flex;
         background-color: $header-color;
         grid-area: header;
     }
@@ -25,10 +35,24 @@ body {
 
     .content {
         grid-area: content;
+        background-color: white;
     }
 
     .chat {
         background-color: $chat-color;
         grid-area: chat;
+    }
+
+    .search {
+        background-color: $green-color;
+        width: 200px;
+    }
+    .nav-menu {
+        flex-grow: 1;
+        justify-content: flex-end;
+    }
+    .add-new {
+        background-color: $orange-color;
+        width: 85px;
     }
 }
