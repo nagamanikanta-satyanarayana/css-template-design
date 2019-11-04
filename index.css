@@ -1,0 +1,10 @@
+.container {
+  display: grid;
+  min-height: 100vh;
+  background-color: gray; }
+  .container div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black; }
+
+/*# sourceMappingURL=index.css.map */
