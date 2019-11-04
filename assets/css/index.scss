@@ -1,4 +1,6 @@
 @import 'base';
+@import 'utils';
+
 body {
     color: white;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 56%, rgba(0,212,255,1) 81%);
@@ -46,6 +48,29 @@ body {
     .search {
         background-color: $green-color;
         width: 200px;
+
+        input {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            border-bottom: 1px solid white;
+            color: white;
+            width: 140px;
+            :hover, :active, :focus {
+                outline: none;
+            }
+        }
+        @include placeholder {
+            color: white;
+            font-style: italic;
+        }
+
+        .icon {
+            position: relative;
+            top: -5px;
+            left: -15px;
+            cursor: pointer;
+        }
     }
     .nav-menu {
         flex-grow: 1;

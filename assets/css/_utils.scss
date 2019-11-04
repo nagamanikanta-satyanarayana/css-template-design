@@ -1,0 +1,12 @@
+// useful mixins
+@mixin placeholder {
+    ::-webkit-input-placeholder {@content}
+    :-moz-placeholder           {@content}
+    ::-moz-placeholder          {@content}
+    :-ms-input-placeholder      {@content}  
+}
+
+.icon {
+    width: 15px;
+    height: 20px;
+}

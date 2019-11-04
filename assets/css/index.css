@@ -2,6 +2,14 @@ body {
   color: white;
   background: linear-gradient(90deg, #020024 0%, #090979 56%, #00d4ff 81%); }
 
+.icon {
+  width: 15px;
+  height: 20px; }
+
+body {
+  color: white;
+  background: linear-gradient(90deg, #020024 0%, #090979 56%, #00d4ff 81%); }
+
 .flex-center {
   display: flex;
   align-items: center;
@@ -31,6 +39,32 @@ body {
   .container .search {
     background-color: #2FB398;
     width: 200px; }
+    .container .search input {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      border-bottom: 1px solid white;
+      color: white;
+      width: 140px; }
+      .container .search input :hover, .container .search input :active, .container .search input :focus {
+        outline: none; }
+    .container .search ::-webkit-input-placeholder {
+      color: white;
+      font-style: italic; }
+    .container .search :-moz-placeholder {
+      color: white;
+      font-style: italic; }
+    .container .search ::-moz-placeholder {
+      color: white;
+      font-style: italic; }
+    .container .search :-ms-input-placeholder {
+      color: white;
+      font-style: italic; }
+    .container .search .icon {
+      position: relative;
+      top: -5px;
+      left: -15px;
+      cursor: pointer; }
   .container .nav-menu {
     flex-grow: 1;
     justify-content: flex-end; }
