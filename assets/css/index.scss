@@ -95,11 +95,25 @@ body {
       height: 35px;
       margin-right: 30px;
       cursor: pointer;
+      position: relative;
     }
   }
   .add-new {
     cursor: pointer;
     background-color: $orange-color;
     width: 85px;
+  }
+
+  .badge {
+    position: absolute;
+    top: -5px;
+    right: -4px;
+    background-color: $green-color;
+    z-index: 1000;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    font-size: 70%;
+    font-weight: bold;
   }
 }

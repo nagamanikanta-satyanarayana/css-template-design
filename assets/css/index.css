@@ -86,10 +86,22 @@ body {
       width: 35px;
       height: 35px;
       margin-right: 30px;
-      cursor: pointer; }
+      cursor: pointer;
+      position: relative; }
   .container .add-new {
     cursor: pointer;
     background-color: #E76048;
     width: 85px; }
+  .container .badge {
+    position: absolute;
+    top: -5px;
+    right: -4px;
+    background-color: #2FB398;
+    z-index: 1000;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    font-size: 70%;
+    font-weight: bold; }
 
 /*# sourceMappingURL=index.css.map */
