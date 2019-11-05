@@ -26,10 +26,28 @@
   cursor: pointer;
 }
 
-.icon-bg {
+.icon-md {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.icon-lg {
   cursor: pointer;
   width: 25px;
   height: 25px;
+}
+
+.btn {
+  background-color: $green-color;
+  color: white;
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  &:hover {
+    background-color: #2da78e;
+  }
 }
 
 .badge {

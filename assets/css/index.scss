@@ -2,6 +2,7 @@
 @import "utils";
 @import "chat";
 @import "menu";
+@import "content";
 
 .container {
   margin: auto;
@@ -27,11 +28,6 @@
         width: 140px;
       }
     }
-  }
-
-  .content {
-    grid-area: content;
-    background-color: white;
   }
 
   .nav-menu {
