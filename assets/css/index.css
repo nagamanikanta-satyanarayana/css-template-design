@@ -140,10 +140,6 @@ body {
     .menu .list-item:nth-of-type(3n) .colored-circle {
       border-color: #2fb398; }
 
-body {
-  color: white;
-  background: linear-gradient(90deg, #020024 0%, #090979 56%, #00d4ff 81%); }
-
 .container {
   margin: auto;
   max-width: 1254px;
