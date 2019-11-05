@@ -1,0 +1,11 @@
+// chat css
+.chat {
+  background-color: $chat-color;
+  grid-area: chat;
+  padding: 30px;
+
+  .search {
+    color: #b5bcc5;
+    border-color: #b5bcc5;
+  }
+}

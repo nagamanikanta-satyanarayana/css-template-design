@@ -14,6 +14,12 @@
   }
 }
 
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .icon {
   width: 15px;
   height: 15px;
@@ -24,4 +30,54 @@
   cursor: pointer;
   width: 25px;
   height: 25px;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -4px;
+  background-color: $green-color;
+  z-index: 1000;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  font-size: 70%;
+  font-weight: bold;
+}
+
+.colored-circle {
+  width: 15px;
+  height: 15px;
+  border: 2px solid;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+// search input bar with icon
+.search {
+  width: 100%;
+  background-color: inherit;
+  input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid currentColor;
+    color: inherit;
+    width: 140px;
+    :hover,
+    :active,
+    :focus {
+      outline: none;
+    }
+  }
+  @include placeholder {
+    color: inherit;
+    font-style: italic;
+  }
+
+  .icon {
+    position: relative;
+    top: -5px;
+    left: -15px;
+  }
 }

@@ -3,6 +3,11 @@ body {
   color: white;
   background: linear-gradient(90deg, #020024 0%, #090979 56%, #00d4ff 81%); }
 
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 .icon {
   width: 15px;
   height: 15px;
@@ -13,14 +18,95 @@ body {
   width: 25px;
   height: 25px; }
 
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -4px;
+  background-color: #2fb398;
+  z-index: 1000;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  font-size: 70%;
+  font-weight: bold; }
+
+.colored-circle {
+  width: 15px;
+  height: 15px;
+  border: 2px solid;
+  border-radius: 50%;
+  margin-right: 10px; }
+
+.search {
+  width: 100%;
+  background-color: inherit; }
+  .search input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid currentColor;
+    color: inherit;
+    width: 140px; }
+    .search input :hover,
+    .search input :active,
+    .search input :focus {
+      outline: none; }
+  .search ::-webkit-input-placeholder {
+    color: inherit;
+    font-style: italic; }
+  .search :-moz-placeholder {
+    color: inherit;
+    font-style: italic; }
+  .search ::-moz-placeholder {
+    color: inherit;
+    font-style: italic; }
+  .search :-ms-input-placeholder {
+    color: inherit;
+    font-style: italic; }
+  .search .icon {
+    position: relative;
+    top: -5px;
+    left: -15px; }
+
+.chat {
+  background-color: #eaedf1;
+  grid-area: chat;
+  padding: 30px; }
+  .chat .search {
+    color: #b5bcc5;
+    border-color: #b5bcc5; }
+
+.menu {
+  background-color: #1f282d;
+  grid-area: menu;
+  padding: 5px 0; }
+  .menu .heading {
+    height: 40px;
+    color: #75838c;
+    text-transform: uppercase;
+    padding: 20px 30px;
+    font-size: 12px;
+    font-family: sans-serif; }
+  .menu .list-item {
+    padding: 0 30px;
+    height: 42px;
+    justify-content: flex-start;
+    cursor: pointer;
+    color: #ffffffb5; }
+    .menu .list-item img {
+      margin-right: 10px; }
+    .menu .list-item:hover {
+      background-color: #2f373c; }
+    .menu .list-item:nth-of-type(1n) .colored-circle {
+      border-color: yellow; }
+    .menu .list-item:nth-of-type(2n) .colored-circle {
+      border-color: #e76048; }
+    .menu .list-item:nth-of-type(3n) .colored-circle {
+      border-color: #2fb398; }
+
 body {
   color: white;
   background: linear-gradient(90deg, #020024 0%, #090979 56%, #00d4ff 81%); }
-
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
 
 .container {
   margin: auto;
@@ -28,59 +114,20 @@ body {
   display: grid;
   grid-template-areas: "header header header" "menu content chat";
   grid-template-rows: 85px 1fr;
-  grid-template-columns: 200px 1fr 225px;
+  grid-template-columns: 200px minmax(300px, 1fr) 225px;
   min-height: 100vh; }
   .container .header {
     display: flex;
     background-color: #151d20;
     grid-area: header; }
-  .container .menu {
-    background-color: #1f282d;
-    grid-area: menu;
-    padding: 5px 0; }
-    .container .menu .heading {
-      height: 40px;
-      color: #75838c;
-      text-transform: uppercase;
-      padding: 20px 30px;
-      font-size: 12px;
-      font-family: sans-serif; }
+    .container .header .search {
+      background-color: #2fb398;
+      color: white;
+      border-color: white;
+      width: 200px; }
   .container .content {
     grid-area: content;
     background-color: white; }
-  .container .chat {
-    background-color: #eaedf1;
-    grid-area: chat; }
-  .container .search {
-    background-color: #2fb398;
-    width: 200px; }
-    .container .search input {
-      border: none;
-      outline: none;
-      background-color: transparent;
-      border-bottom: 1px solid white;
-      color: white;
-      width: 140px; }
-      .container .search input :hover,
-      .container .search input :active,
-      .container .search input :focus {
-        outline: none; }
-    .container .search ::-webkit-input-placeholder {
-      color: white;
-      font-style: italic; }
-    .container .search :-moz-placeholder {
-      color: white;
-      font-style: italic; }
-    .container .search ::-moz-placeholder {
-      color: white;
-      font-style: italic; }
-    .container .search :-ms-input-placeholder {
-      color: white;
-      font-style: italic; }
-    .container .search .icon {
-      position: relative;
-      top: -5px;
-      left: -15px; }
   .container .nav-menu {
     flex-grow: 1;
     justify-content: flex-end; }
@@ -101,40 +148,5 @@ body {
     cursor: pointer;
     background-color: #e76048;
     width: 85px; }
-  .container .badge {
-    position: absolute;
-    top: -5px;
-    right: -4px;
-    background-color: #2fb398;
-    z-index: 1000;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    font-size: 70%;
-    font-weight: bold; }
-
-.list-item {
-  padding: 0 30px;
-  height: 42px;
-  justify-content: flex-start;
-  cursor: pointer;
-  color: #ffffffb5; }
-  .list-item img {
-    margin-right: 10px; }
-  .list-item:hover {
-    background-color: #2f373c; }
-  .list-item:nth-of-type(1n) .colored-circle {
-    border-color: yellow; }
-  .list-item:nth-of-type(2n) .colored-circle {
-    border-color: #e76048; }
-  .list-item:nth-of-type(3n) .colored-circle {
-    border-color: #2fb398; }
-
-.colored-circle {
-  width: 15px;
-  height: 15px;
-  border: 2px solid;
-  border-radius: 50%;
-  margin-right: 10px; }
 
 /*# sourceMappingURL=index.css.map */
