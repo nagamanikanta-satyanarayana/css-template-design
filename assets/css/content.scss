@@ -15,6 +15,15 @@
     border-radius: 5px;
     border-style: solid;
     height: 500px;
+    // a small hack for the masonary layout
+    &:nth-child(2n + 1) {
+      position: relative;
+      top: -350px;
+    }
+    &:first-child {
+      position: relative;
+      top: 0px;
+    }
   }
   .create-post {
     background-color: #eaedf1;

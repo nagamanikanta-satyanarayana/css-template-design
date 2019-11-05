@@ -172,6 +172,12 @@ body {
     border-radius: 5px;
     border-style: solid;
     height: 500px; }
+    .content .box:nth-child(2n + 1) {
+      position: relative;
+      top: -350px; }
+    .content .box:first-child {
+      position: relative;
+      top: 0px; }
   .content .create-post {
     background-color: #eaedf1;
     height: 140px; }
