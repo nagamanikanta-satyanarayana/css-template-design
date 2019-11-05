@@ -26,7 +26,7 @@ body {
     "header header header"
     "menu content chat";
   grid-template-rows: 85px 1fr;
-  grid-template-columns: 12% 1fr 20%;
+  grid-template-columns: 200px 1fr 225px;
   min-height: 100vh;
 
   .header {
@@ -37,6 +37,16 @@ body {
   .menu {
     background-color: $menu-color;
     grid-area: menu;
+    padding: 5px 0;
+
+    .heading {
+      height: 40px;
+      color: #75838c;
+      text-transform: uppercase;
+      padding: 20px 30px;
+      font-size: 12px;
+      font-family: $menu-heading-font;
+    }
   }
 
   .content {
@@ -116,4 +126,44 @@ body {
     font-size: 70%;
     font-weight: bold;
   }
+}
+
+.list-item {
+  padding: 0 30px;
+  height: 42px;
+  justify-content: flex-start;
+  cursor: pointer;
+  color: #ffffffb5;
+  img {
+    margin-right: 10px;
+  }
+  &:hover {
+    background-color: #2f373c;
+  }
+
+  &:nth-of-type(1n) {
+    .colored-circle {
+      border-color: yellow;
+    }
+  }
+
+  &:nth-of-type(2n) {
+    .colored-circle {
+      border-color: $orange-color;
+    }
+  }
+
+  &:nth-of-type(3n) {
+    .colored-circle {
+      border-color: $green-color;
+    }
+  }
+}
+
+.colored-circle {
+  width: 15px;
+  height: 15px;
+  border: 2px solid;
+  border-radius: 50%;
+  margin-right: 10px;
 }

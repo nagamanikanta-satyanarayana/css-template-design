@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="assets/css/reset.css" />
   <link rel="stylesheet" href="assets/css/index.css" />
   <script>
@@ -14,6 +18,7 @@
 </head>
 <body>
   <div class="container">
+    <!-- Header -->
     <div class="header">
       <div class="search flex-center">
         <input type="text" placeholder="Search all..." />
@@ -35,8 +40,88 @@
         <img class="icon-bg" src="assets/img/add.svg" />
       </div>
     </div>
-    <div class="menu">nav-menu</div>
+    <!-- left side fixed menu -->
+    <div class="menu">
+      <div class="heading">
+        Main
+      </div>
+      <ul class="items">
+        <li class="list-item flex-center">
+          <img class="icon" src="assets/img/magnifying-glass.svg" />
+          <span>Discover</span>
+        </li>
+
+        <li class="list-item flex-center">
+          <img class="icon" src="assets/img/comment.svg" />
+          <span>Events</span>
+        </li>
+
+        <li class="list-item flex-center">
+          <img class="icon" src="assets/img/notification.svg" />
+          <span>Friends</span>
+        </li>
+
+        <li class="list-item flex-center">
+          <img class="icon" src="assets/img/settings.svg" />
+          <span>Photos</span>
+        </li>
+
+        <li class="list-item flex-center">
+          <img class="icon" src="assets/img/magnifying-glass.svg" />
+          <span>Videos</span>
+        </li>
+      </ul>
+
+      <div class="heading">
+        Recent
+      </div>
+      <ul class="items">
+        <li class="list-item flex-center">
+          <img class="icon" src="assets/img/magnifying-glass.svg" />
+          <span>Hotels</span>
+        </li>
+
+        <li class="list-item flex-center">
+          <img class="icon" src="assets/img/comment.svg" />
+          <span>Vacations</span>
+        </li>
+
+        <li class="list-item flex-center">
+          <img class="icon" src="assets/img/notification.svg" />
+          <span>Restaurants</span>
+        </li>
+
+        <li class="list-item flex-center">
+          <img class="icon" src="assets/img/settings.svg" />
+          <span>Crusies</span>
+        </li>
+      </ul>
+
+      <div class="heading">
+        Groups
+      </div>
+      <ul class="items">
+        <li class="list-item flex-center">
+          <div class="colored-circle"></div>
+          <span>Celebrities</span>
+        </li>
+
+        <li class="list-item flex-center">
+          <div class="colored-circle"></div>
+          <span>Designers</span>
+        </li>
+
+        <li class="list-item flex-center">
+          <div class="colored-circle"></div>
+          <span>Party Trips</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main content -->
     <div class="content">content</div>
+
+    <!-- right side chat -->
     <div class="chat">chat</div>
   </div>
 </body>
