@@ -1,11 +1,69 @@
 // chat css
 .chat {
+  max-height: calc(100vh - 85px);
+  overflow: auto;
   background-color: $chat-color;
   grid-area: chat;
   padding: 30px;
+  color: #788390;
 
   .search {
     color: #b5bcc5;
     border-color: #b5bcc5;
+  }
+
+  .heading {
+    color: #595a5d;
+    margin: 20px 0px;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    font-size: 14px;
+    span {
+      margin-right: 10px;
+    }
+  }
+
+  .chat-item {
+    padding: 10px 0px;
+    cursor: pointer;
+    &:nth-of-type(1n) {
+      .online {
+        background-color: orange;
+      }
+    }
+
+    &:nth-of-type(2n) {
+      .online {
+        background-color: $orange-color;
+      }
+    }
+
+    &:nth-of-type(3n) {
+      .online {
+        background-color: $green-color;
+      }
+    }
+  }
+  .avatar {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .name {
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+  }
+  .indicator {
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .offline {
+    background-color: #bbb7b7;
   }
 }

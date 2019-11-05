@@ -55,7 +55,6 @@
 
 // search input bar with icon
 .search {
-  width: 100%;
   background-color: inherit;
   input {
     border: none;
@@ -63,7 +62,6 @@
     background-color: transparent;
     border-bottom: 1px solid currentColor;
     color: inherit;
-    width: 140px;
     :hover,
     :active,
     :focus {
